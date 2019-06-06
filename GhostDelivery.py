@@ -107,6 +107,7 @@ class build():
 
 	def obfs(self):
 		D=str(chr(42))
+		
 		def randCapitalization(characters):
 			G=""
 			for b in characters:
@@ -123,6 +124,7 @@ class build():
 		x=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 		s=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 		L=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+		
 		def obfu(body):
 			A=""
 			for i in range(0,len(body)):
@@ -131,6 +133,7 @@ class build():
 				else:
 					A+="*"+expr(ord(body[i]))
 			return A
+		
 		def expr(char):
 			range=random.randrange(100,10001)
 			N=random.randrange(0,3)
