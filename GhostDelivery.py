@@ -41,7 +41,7 @@ def clear():
 class build():
 
 	def vbs(self):
-		
+
 		heavy = {'heavy','h'}
 		light = {'light','l'}
 		medium = {'medium', 'm'}
@@ -60,7 +60,7 @@ class build():
 			else:
 				executable()
 			x.replace(script)
-		
+
 		def powershell():
 			clear()
 			input = raw_input("\nDo you want a light, medium or heavy script?: ").lower()
@@ -108,7 +108,7 @@ class build():
 
 	def obfs(self):
 		D=str(chr(42))
-		
+
 		def randCapitalization(characters):
 			G=""
 			for b in characters:
@@ -125,7 +125,7 @@ class build():
 		x=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 		s=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 		L=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
-		
+
 		def obfu(body):
 			A=""
 			for i in range(0,len(body)):
@@ -134,7 +134,7 @@ class build():
 				else:
 					A+="*"+expr(ord(body[i]))
 			return A
-		
+
 		def expr(char):
 			range=random.randrange(100,10001)
 			N=random.randrange(0,3)
@@ -150,7 +150,7 @@ class build():
 
 		j=open("t","r")
 		obfs=open("obfs.vbs","w")
-		
+
 		obfs.write(randCapitalization("Dim "+X+", "+w+", "+y)+"\n")
 		obfs.write(randCapitalization("Sub "+s)+"\n")
 		obfs.write(randCapitalization(X+" = ")+chr(34)+obfu(j.read())+chr(34)+"\n")
