@@ -15,14 +15,14 @@ def gen_gd():
 		shortcuts with payload path
 		*Adds scheduled task for payload to be run at login
 		*Obfuscates the vbs script
-		
+
 	Medium: *Downloads payload to TEMP directory and executes payload
 		*Adds scheduled task for payload to be run at login
 		*Injects/creates Command Prompt and Microsoft Edge
 		shortcuts with payload path
 		*Disables UAC
 		*Obfuscates the vbs script
-		
+
 	Light:  *Downloads payload to TEMP directory and executes payload
 		*Adds scheduled task for payload to be run at login
 		*Injects/creates Command Prompt and Microsoft Edge
