@@ -24,8 +24,10 @@ Python script to generate obfuscated .vbs script that delivers payload (payload 
 - Includes a serveo function to deliver obfuscated vbs script
 # Prerequisites/requirements:
 
-*Python 2.7, Modules imported in script. (random, sys, string, os, time, base64)
-
-# Citations:
-- https://www.kitploit.com/2019/06/ghostdelivery-this-tool-creates.html
-- https://kalilinuxtutorials.com/ghostdelivery/amp/
+*Python 2.7 + Modules imported in script.
+- random
+- sys
+- string
+- os
+- time
+- base64
