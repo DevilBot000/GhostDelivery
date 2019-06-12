@@ -1,7 +1,7 @@
 # GhostDelivery
 
 Python script to generate obfuscated .vbs script that delivers payload (payload dropper) with persistence and windows antivirus disabling functions.
-Heavy:
+# Heavy:
 
 - Downloads payload to TEMP directory and executes payload to bypass windows smart screen
 - Disables Defender
