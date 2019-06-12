@@ -8,7 +8,7 @@ Python script to generate obfuscated .vbs script that delivers payload (payload 
 - Disables UAC/user account control
 - Disables Defender Notifications
 - Injects/creates Command Prompt and Microsoft Edge shortcuts with payload path (%TEMP%/payload.exe) to execute payload when opened
-- Creates a scheduled task called "WindowsDefender" for payload to be run at login and obfuscates the vbs delivery script.
+- Creates a scheduled task called "WindowsDefender" for payload to be run at login and obfuscates the vbs delivery script
 - Includes a serveo function to deliver obfuscated vbs script
 # Medium:
 
