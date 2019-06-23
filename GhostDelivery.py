@@ -29,7 +29,9 @@ def gen_gd():
 	This tool also has a serveo function to deliver obfuscated vbs script
 			""")
 
+
 def clear():
+
 	if os.name == "nt": 
 		os.system('cls')
 	else: 
@@ -43,6 +45,7 @@ def vbs():
 	medium = {'medium', 'm'}
 
 	input = raw_input("Is your payload a powershell script or executable? enter 'ps1' or 'exe': ").lower()
+
 
 	def executable():
 		clear()
@@ -61,7 +64,9 @@ def vbs():
 			executable()
 		replace(script)
 
+
 	def powershell():
+		
 		clear()
 		input = raw_input("\nDo you want a light, medium or heavy script?: ").lower()
 		
@@ -110,7 +115,9 @@ def replace(script):
 		file.close()
 	D=str(chr(42))
 
+
 def obfs():
+
 	D=str(chr(42))
 
 	def randCapitalization(characters):
@@ -173,6 +180,7 @@ def obfs():
 	os.remove('t')
 
 def serveo():
+
 	clear()
 	yes = {'yes','y','ye',''}
 	no = {'no','n','exit'}
@@ -198,5 +206,6 @@ def main():
 	vbs()
 	obfs()
 	serveo()
+
 if __name__== "__main__":
 	main()
