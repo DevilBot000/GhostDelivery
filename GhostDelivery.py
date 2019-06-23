@@ -48,6 +48,7 @@ def vbs():
 
 
 	def executable():
+
 		clear()
 		input = raw_input("\nDo you want a light, medium or heavy script?: ").lower()
 		
@@ -121,6 +122,7 @@ def obfs():
 	D=str(chr(42))
 
 	def randCapitalization(characters):
+
 		G=""
 		for b in characters:
 			r=random.randrange(0,2)
@@ -138,6 +140,7 @@ def obfs():
 	L=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 
 	def obfu(body):
+
 		A=""
 		for i in range(0,len(body)):
 			if A=="":
@@ -147,6 +150,7 @@ def obfs():
 		return A
 
 	def expr(char):
+
 		range=random.randrange(100,10001)
 		N=random.randrange(0,3)
 		if N==0:
