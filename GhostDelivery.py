@@ -111,66 +111,66 @@ def replace(script):
 	D=str(chr(42))
 
 def obfs():
-		D=str(chr(42))
+	D=str(chr(42))
 
-		def randCapitalization(characters):
-			G=""
-			for b in characters:
-				r=random.randrange(0,2)
-				if r==0:
-					G+=b.upper()
-				if r==1:
-					G+=b.lower()
-			return G
-		H=random.randrange(5,60)
-		X=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
-		w=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
-		y=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
-		x=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
-		s=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
-		L=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+	def randCapitalization(characters):
+		G=""
+		for b in characters:
+			r=random.randrange(0,2)
+			if r==0:
+				G+=b.upper()
+			if r==1:
+				G+=b.lower()
+		return G
+	H=random.randrange(5,60)
+	X=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+	w=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+	y=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+	x=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+	s=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
+	L=''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase)for _ in range(H))
 
-		def obfu(body):
-			A=""
-			for i in range(0,len(body)):
-				if A=="":
-					A+=expr(ord(body[i]))
-				else:
-					A+="*"+expr(ord(body[i]))
-			return A
+	def obfu(body):
+		A=""
+		for i in range(0,len(body)):
+			if A=="":
+				A+=expr(ord(body[i]))
+			else:
+				A+="*"+expr(ord(body[i]))
+		return A
 
-		def expr(char):
-			range=random.randrange(100,10001)
-			N=random.randrange(0,3)
-			if N==0:
-				print "Char "+str(char)+" -> "+str((range+char))+"-"+str(range)
-				return str((range+char))+"-"+str(range)
-			if N==1:
-				print "Char "+str(char)+" -> "+str((char-range))+"+"+str(range)
-				return str((char-range))+"+"+str(range)
-			if N==2:
-				print "Char "+str(char)+" -> "+str((char*range))+"/"+str(range)
-				return str((char*range))+"/"+str(range)
+	def expr(char):
+		range=random.randrange(100,10001)
+		N=random.randrange(0,3)
+		if N==0:
+			print "Char "+str(char)+" -> "+str((range+char))+"-"+str(range)
+			return str((range+char))+"-"+str(range)
+		if N==1:
+			print "Char "+str(char)+" -> "+str((char-range))+"+"+str(range)
+			return str((char-range))+"+"+str(range)
+		if N==2:
+			print "Char "+str(char)+" -> "+str((char*range))+"/"+str(range)
+			return str((char*range))+"/"+str(range)
 
-		j=open("t","r")
-		obfs=open("obfs.vbs","w")
+	j=open("t","r")
+	obfs=open("obfs.vbs","w")
 
-		obfs.write(randCapitalization("Dim "+X+", "+w+", "+y)+"\n")
-		obfs.write(randCapitalization("Sub "+s)+"\n")
-		obfs.write(randCapitalization(X+" = ")+chr(34)+obfu(j.read())+chr(34)+"\n")
-		obfs.write(randCapitalization(w+" = Split("+X+", chr(eval(")+obfu(D)+")))\n")
-		obfs.write(randCapitalization("for each "+x+" in "+w)+"\n")
-		obfs.write(randCapitalization(y+" = "+y+" & chr(eval("+x)+"))\n")
-		obfs.write(randCapitalization("next")+"\n")
-		obfs.write(randCapitalization(L)+"\n")
-		obfs.write(randCapitalization("End Sub")+"\n")
-		obfs.write(randCapitalization("Sub "+L)+"\n")
-		obfs.write(randCapitalization("eval(execute("+y)+"))\n")
-		obfs.write(randCapitalization("End Sub")+"\n")
-		obfs.write(randCapitalization(s)+"\n")
-		j.close()
-		obfs.close()
-		os.remove('t')
+	obfs.write(randCapitalization("Dim "+X+", "+w+", "+y)+"\n")
+	obfs.write(randCapitalization("Sub "+s)+"\n")
+	obfs.write(randCapitalization(X+" = ")+chr(34)+obfu(j.read())+chr(34)+"\n")
+	obfs.write(randCapitalization(w+" = Split("+X+", chr(eval(")+obfu(D)+")))\n")
+	obfs.write(randCapitalization("for each "+x+" in "+w)+"\n")
+	obfs.write(randCapitalization(y+" = "+y+" & chr(eval("+x)+"))\n")
+	obfs.write(randCapitalization("next")+"\n")
+	obfs.write(randCapitalization(L)+"\n")
+	obfs.write(randCapitalization("End Sub")+"\n")
+	obfs.write(randCapitalization("Sub "+L)+"\n")
+	obfs.write(randCapitalization("eval(execute("+y)+"))\n")
+	obfs.write(randCapitalization("End Sub")+"\n")
+	obfs.write(randCapitalization(s)+"\n")
+	j.close()
+	obfs.close()
+	os.remove('t')
 
 def serveo():
 	clear()
