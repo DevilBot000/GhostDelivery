@@ -109,7 +109,6 @@ def replace(script):
 		for line in lines:
 			file.write(line + "\n")
 		file.close()
-	D=str(chr(42))
 
 
 def obfs():
