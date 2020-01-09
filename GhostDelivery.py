@@ -111,7 +111,7 @@ def main():
 	obfs.close()
 	os.remove('t')
 	clear()
-	yes = {'yes','y','ye',''}
+	yes = ['yes','y','ye','']
 	print('Delivery script obfuscated and saved as "obfs.vbs"')
 	input = raw_input('Would you like to start a serveo server for payload delivery? yes/no: ').lower()
 	if input in yes:
